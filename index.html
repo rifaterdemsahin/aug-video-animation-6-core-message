@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voiceover Scene Structure & Animation Prompts 🎬</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        [contenteditable]:focus {
+            outline: 2px solid #6366f1;
+            background-color: rgba(99, 102, 241, 0.05);
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8 font-sans">
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Header -->
+        <header class="text-center space-y-4 border-b border-slate-800 pb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                🎬 Voiceover & Scene Breakdown 🚀
+            </h1>
+            <p class="text-slate-400 max-w-3xl mx-auto text-base sm:text-lg">
+                12-scene narrative structure guiding Erdem's core message. Edit cells directly, add/remove scenes, and copy formatted markdown or table data with ease. ✨
+            </p>
+        </header>
+
+        <!-- Controls Toolbar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-800/60 p-4 rounded-xl border border-slate-700/50 backdrop-blur-sm">
+            <div class="flex items-center space-x-2 text-sm text-slate-400">
+                <span>💡 <strong class="text-slate-200">Tip:</strong> Click any cell to edit content directly.</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button id="add-row-btn" onclick="addRow()" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm rounded-lg transition-all shadow-lg shadow-indigo-600/20 active:scale-95">
+                    <i class="fa-solid fa-plus"></i> Add Row ➕
+                </button>
+                <button id="reset-btn" onclick="resetTable()" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 font-medium text-sm rounded-lg transition-all active:scale-95">
+                    <i class="fa-solid fa-rotate-left"></i> Reset Data 🔄
+                </button>
+            </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="overflow-x-auto rounded-xl border border-slate-700/60 bg-slate-800/40 shadow-2xl backdrop-blur-md">
+            <table id="vo-table" class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-800/90 text-slate-300 text-xs sm:text-sm uppercase tracking-wider border-b border-slate-700">
+                        <th class="py-4 px-4 font-semibold w-24">Scene 🎬</th>
+                        <th class="py-4 px-4 font-semibold w-44">Keyword Metaphor 📌</th>
+                        <th class="py-4 px-4 font-semibold">Visual Concept & Animation Prompt 🖼️</th>
+                        <th class="py-4 px-4 font-semibold w-80">Voiceover Line (VO) 🎙️</th>
+                        <th class="py-4 px-4 font-semibold w-20 text-center">Action ⚙️</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="divide-y divide-slate-700/50 text-sm text-slate-200">
+                    <!-- Dynamic Rows Loaded Here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+            <div id="status-toast" class="hidden items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 rounded-lg text-sm font-medium">
+                <i class="fa-solid fa-circle-check"></i> <span id="status-message">Table copied to clipboard!</span> 🎉
+            </div>
+            <div class="flex items-center gap-3 ml-auto">
+                <button id="copy-markdown-btn" onclick="copyTable('markdown')" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-sm rounded-xl transition-all shadow-lg shadow-purple-600/30 active:scale-95">
+                    <i class="fa-solid fa-copy"></i> Copy Markdown Table 📋
+                </button>
+                <button id="copy-text-btn" onclick="copyTable('text')" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm rounded-xl transition-all shadow-md active:scale-95">
+                    <i class="fa-solid fa-clipboard"></i> Copy Plain Text 📝
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        const initialData = [
+            {
+                scene: "01",
+                metaphor: "Step 1 / 12 🐾",
+                concept: "<strong>Prompt:</strong> Clean 3D motion graphic 🎥, glowing digital blueprint titled \"Step 1 of 12 Steps\", glowing node expanding outward ✨, futuristic UI 💻, hyper-detailed 🔍, dynamic lighting 💡.",
+                vo: "\"AI isn't just changing the game—\" 🤖"
+            },
+            {
+                scene: "02",
+                metaphor: "Step 2 / 12 📈",
+                concept: "<strong>Prompt:</strong> Macro shot of a human eye reflecting rising exponential AI growth charts labeled \"Step 2 of 12 Steps\" 📊, cinematic lighting 🕯️, sharp focus 🎯, 8k resolution 📸.",
+                vo: "\"—it’s redefining the bar.\" 🏋️‍♂️"
+            },
+            {
+                scene: "03",
+                metaphor: "Step 3 / 12 🪜",
+                concept: "<strong>Prompt:</strong> Minimalist digital staircase with 12 steps, a glowing cursor ascending to \"Step 3\" 🖱️, sleek tech corporate aesthetic 🏢, fluid motion blur 💨.",
+                vo: "\"As technology accelerates...\" 🚀"
+            },
+            {
+                scene: "04",
+                metaphor: "Step 4 / 12 ⚡",
+                concept: "<strong>Prompt:</strong> Fast-cut motion graphics ✂️, complex skill meters rapidly maxing out 💯, dynamic text overlaying \"Step 4 of 12 Steps\" 📝, high contrast 🎨, energetic 🔥.",
+                vo: "\"...skill expectations skyrocket.\" 📈"
+            },
+            {
+                scene: "05",
+                metaphor: "Step 5 / 12 ⌨️",
+                concept: "<strong>Prompt:</strong> Close-up of hands typing on a glowing holographic interface 🌐, self-learning network nodes connecting at \"Step 5 of 12 Steps\" 🧠, warm ambient lighting 🌙.",
+                vo: "\"The answer isn't stepping back...\" 🚶‍♂️"
+            },
+            {
+                scene: "06",
+                metaphor: "Step 6 / 12 ⚖️",
+                concept: "<strong>Prompt:</strong> Abstract representation of human mind vs AI neural network reaching equilibrium at \"Step 6 of 12 Steps\" ☯️, soft volumetric light ☁️, isometric design 📐.",
+                vo: "\"...or relying on passive learning.\" 🛋️"
+            },
+            {
+                scene: "07",
+                metaphor: "Step 7 / 12 🎯",
+                concept: "<strong>Prompt:</strong> Cinematic shot, student at desk at night with glowing screen 🌙, a physical progress path labeled \"Step 7 of 12 Steps\" illuminating forward 💡, shallow depth of field 🎥.",
+                vo: "\"It demands active self-mastery.\" 🥋"
+            },
+            {
+                scene: "08",
+                metaphor: "Step 8 / 12 🌐",
+                concept: "<strong>Prompt:</strong> 3D glowing sphere sending ripples outward to smaller surrounding spheres at \"Step 8 of 12 Steps\" 🌊, representing knowledge sharing 🤝, golden hour light 🌅.",
+                vo: "\"Because staying relevant means...\" ⏳"
+            },
+            {
+                scene: "09",
+                metaphor: "Step 9 / 12 👥",
+                concept: "<strong>Prompt:</strong> Diverse group of professionals standing in an expanding glowing circular network ⭕, \"Step 9 of 12 Steps\" glowing beneath them 🌟, wide angle lens 📷, inspiring lighting ✨.",
+                vo: "\"...not just educating yourself...\" 📚"
+            },
+            {
+                scene: "10",
+                metaphor: "Step 10 / 12 🔍",
+                concept: "<strong>Prompt:</strong> Continuous zoom shot through 12 luminous steps 🪜, landing on \"Step 10 of 12 Steps\" 🎯, hyper-modern aesthetic 💎, vibrant blue and amber tones 🎨.",
+                vo: "\"...but expanding knowledge outward.\" 📢"
+            },
+            {
+                scene: "11",
+                metaphor: "Step 11 / 12 🌍",
+                concept: "<strong>Prompt:</strong> Dynamic graphic transition 🔄, connected web of light expanding across a world map at \"Step 11 of 12 Steps\" 🗺️, smooth frame-rate ⚡, modern motion design 🎨.",
+                vo: "\"Uplift your community. Scale your impact.\" 🚀"
+            },
+            {
+                scene: "12",
+                metaphor: "Step 12 / 12 👑",
+                concept: "<strong>Prompt:</strong> Final destination on a 12-step path glowing intensely 🔥, central bold typography reading \"Empower Your Circle\" 💫, cinematic triumph lighting 🏆, 4k render 📽️.",
+                vo: "\"More education for your outer circle is the way forward.\" 🎓"
+            }
+        ];
+
+        function renderTable(data) {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+            data.forEach((row, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-700/30 transition-colors group';
+                tr.innerHTML = `
+                    <td class="py-3 px-4 font-bold text-indigo-400" contenteditable="true">${row.scene}</td>
+                    <td class="py-3 px-4 italic text-slate-300" contenteditable="true">${row.metaphor}</td>
+                    <td class="py-3 px-4 leading-relaxed" contenteditable="true">${row.concept}</td>
+                    <td class="py-3 px-4 text-emerald-300 font-medium" contenteditable="true">${row.vo}</td>
+                    <td class="py-3 px-4 text-center">
+                        <button onclick="deleteRow(this)" class="text-slate-500 hover:text-red-400 p-1.5 rounded transition-colors" title="Delete Row">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function addRow() {
+            const tbody = document.getElementById('table-body');
+            const rowCount = tbody.children.length + 1;
+            const formattedNum = rowCount < 10 ? `0${rowCount}` : `${rowCount}`;
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-slate-700/30 transition-colors group';
+            tr.innerHTML = `
+                <td class="py-3 px-4 font-bold text-indigo-400" contenteditable="true">${formattedNum}</td>
+                <td class="py-3 px-4 italic text-slate-300" contenteditable="true">Step ${formattedNum} / 12 ✨</td>
+                <td class="py-3 px-4 leading-relaxed" contenteditable="true"><strong>Prompt:</strong> New animation prompt... 🎬</td>
+                <td class="py-3 px-4 text-emerald-300 font-medium" contenteditable="true">"New voiceover line..." 🎙️</td>
+                <td class="py-3 px-4 text-center">
+                    <button onclick="deleteRow(this)" class="text-slate-500 hover:text-red-400 p-1.5 rounded transition-colors" title="Delete Row">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+            tr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function deleteRow(btn) {
+            const tr = btn.closest('tr');
+            if (tr) {
+                tr.remove();
+            }
+        }
+
+        function resetTable() {
+            renderTable(initialData);
+            showToast("Table reset to original data!");
+        }
+
+        function copyTable(format = 'markdown') {
+            const tbody = document.getElementById('table-body');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            let output = '';
+
+            if (format === 'markdown') {
+                output += '| Scene | Keyword Metaphor | Visual Concept & Animation Prompt | Voiceover Line (VO) |\n';
+                output += '| --- | --- | --- | --- |\n';
+                rows.forEach(tr => {
+                    const cells = tr.querySelectorAll('td');
+                    if (cells.length >= 4) {
+                        const scene = cells[0].innerText.trim().replace(/\n/g, ' ');
+                        const metaphor = cells[1].innerText.trim().replace(/\n/g, ' ');
+                        const concept = cells[2].innerText.trim().replace(/\n/g, ' ');
+                        const vo = cells[3].innerText.trim().replace(/\n/g, ' ');
+                        output += `| ${scene} | ${metaphor} | ${concept} | ${vo} |\n`;
+                    }
+                });
+            } else {
+                rows.forEach(tr => {
+                    const cells = tr.querySelectorAll('td');
+                    if (cells.length >= 4) {
+                        const scene = cells[0].innerText.trim();
+                        const metaphor = cells[1].innerText.trim();
+                        const concept = cells[2].innerText.trim();
+                        const vo = cells[3].innerText.trim();
+                        output += `Scene: ${scene}\nMetaphor: ${metaphor}\nPrompt: ${concept}\nVO: ${vo}\n\n`;
+                    }
+                });
+            }
+
+            navigator.clipboard.writeText(output).then(() => {
+                showToast(`Table copied as ${format === 'markdown' ? 'Markdown' : 'Plain Text'}!`);
+            }).catch(err => {
+                // Fallback copying mechanism
+                const textarea = document.createElement('textarea');
+                textarea.value = output;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(`Table copied as ${format === 'markdown' ? 'Markdown' : 'Plain Text'}!`);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('status-toast');
+            const msgSpan = document.getElementById('status-message');
+            msgSpan.innerText = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3000);
+        }
+
+        // Initialize table
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable(initialData);
+        });
+    </script>
+</body>
+</html>
