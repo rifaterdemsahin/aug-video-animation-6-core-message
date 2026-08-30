@@ -36,4 +36,5 @@ This project presents an interactive 12-scene video production script and animat
 - **[stage2.html](stage2.html)** - Stage 2: Personal Story Mapping & 12-Scene Script.
 - **[stage3.html](stage3.html)** - Stage 3: Sanity Check, Script Feedback & Options.
 - **[stage4.html](stage4.html)** - Stage 4: ElevenLabs Audio Script & Voice Settings.
+- **[workflow.html](workflow.html)** - End-to-end AI-assisted Video Production Process & Pipeline (4 Phases, 10 Stages, Operational Columns).
 - **[rationale.html](rationale.html)** - Logic & Rationale behind Erdem's core message.

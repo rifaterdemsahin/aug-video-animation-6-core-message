@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Production Workflow & Pipeline 🎬</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8 font-sans">
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Top Navigation Bar -->
+        <nav class="bg-slate-800/80 border border-slate-700/80 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-extrabold text-indigo-400 hover:text-indigo-300 flex items-center gap-2 text-lg">
+                    🎬 Erdem VO Studio
+                </a>
+                <div class="flex flex-wrap items-center gap-1 sm:gap-3 text-xs sm:text-sm font-medium">
+                    <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Table Editor 📊</a>
+                    <a href="stage1.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 1 🚀</a>
+                    <a href="stage2.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 2 📖</a>
+                    <a href="stage3.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 3 🔍</a>
+                    <a href="stage4.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 4 🎙️</a>
+                    <a href="workflow.html" class="px-3 py-1.5 rounded-lg text-white bg-indigo-600 shadow-sm transition-colors">Workflow ⚙️</a>
+                    <a href="rationale.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Logic & Rationale 🧠</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="text-center space-y-4 border-b border-slate-800 pb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold uppercase tracking-wider">
+                ⚡ AI-Assisted Content Pipeline
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                🎬 Modern Video Production Workflow
+            </h1>
+            <p class="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+                This end-to-end video production workflow details a modern, AI-assisted content pipeline organized into four major phases (Vertical Axis) and managed via distinct operational tracking columns (Horizontal Axis).
+            </p>
+        </header>
+
+        <!-- Interactive SVG Visual Pipeline Banner -->
+        <section class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 shadow-2xl space-y-6">
+            <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2 border-b border-slate-700/60 pb-3">
+                <i class="fa-solid fa-diagram-project text-indigo-400"></i> High-Level Pipeline Visual Flow 🗺️
+            </h2>
+
+            <div class="w-full overflow-x-auto py-2">
+                <svg viewBox="0 0 1000 180" class="w-full min-w-[750px] h-auto drop-shadow-md">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3b82f6" />
+                            <stop offset="100%" stop-color="#1d4ed8" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="100%" stop-color="#6d28d9" />
+                        </linearGradient>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ec4899" />
+                            <stop offset="100%" stop-color="#be185d" />
+                        </linearGradient>
+                        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#10b981" />
+                            <stop offset="100%" stop-color="#047857" />
+                        </linearGradient>
+                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- Phase 1: CAPTURE -->
+                    <g transform="translate(20, 20)">
+                        <rect x="0" y="0" width="190" height="110" rx="16" fill="url(#grad1)" filter="url(#glow)" stroke="#60a5fa" stroke-width="2"/>
+                        <text x="95" y="42" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">🎯 CAPTURE</text>
+                        <text x="95" y="68" font-size="12" fill="#dbeafe" text-anchor="middle">Phase 1</text>
+                        <text x="95" y="88" font-size="11" fill="#bfdbfe" text-anchor="middle">Signal Ideation &amp; Setup</text>
+                    </g>
+
+                    <!-- Arrow 1 -->
+                    <g transform="translate(222, 65)">
+                        <path d="M 0 10 L 25 10 M 20 0 L 30 10 L 20 20" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+
+                    <!-- Phase 2: ORGANIZE -->
+                    <g transform="translate(265, 20)">
+                        <rect x="0" y="0" width="190" height="110" rx="16" fill="url(#grad2)" filter="url(#glow)" stroke="#a78bfa" stroke-width="2"/>
+                        <text x="95" y="42" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">📐 ORGANIZE</text>
+                        <text x="95" y="68" font-size="12" fill="#ede9fe" text-anchor="middle">Phase 2</text>
+                        <text x="95" y="88" font-size="11" fill="#ddd6fe" text-anchor="middle">LLM Script &amp; Prompts</text>
+                    </g>
+
+                    <!-- Arrow 2 -->
+                    <g transform="translate(467, 65)">
+                        <path d="M 0 10 L 25 10 M 20 0 L 30 10 L 20 20" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+
+                    <!-- Phase 3: DISTILL -->
+                    <g transform="translate(510, 20)">
+                        <rect x="0" y="0" width="190" height="110" rx="16" fill="url(#grad3)" filter="url(#glow)" stroke="#f472b6" stroke-width="2"/>
+                        <text x="95" y="42" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">🧪 DISTILL</text>
+                        <text x="95" y="68" font-size="12" fill="#fce7f3" text-anchor="middle">Phase 3</text>
+                        <text x="95" y="88" font-size="11" fill="#fbcfe8" text-anchor="middle">Render &amp; Audio Sync</text>
+                    </g>
+
+                    <!-- Arrow 3 -->
+                    <g transform="translate(712, 65)">
+                        <path d="M 0 10 L 25 10 M 20 0 L 30 10 L 20 20" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+
+                    <!-- Phase 4: EXPRESS -->
+                    <g transform="translate(755, 20)">
+                        <rect x="0" y="0" width="190" height="110" rx="16" fill="url(#grad4)" filter="url(#glow)" stroke="#34d399" stroke-width="2"/>
+                        <text x="95" y="42" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">🚀 EXPRESS</text>
+                        <text x="95" y="68" font-size="12" fill="#d1fae5" text-anchor="middle">Phase 4</text>
+                        <text x="95" y="88" font-size="11" fill="#a7f3d0" text-anchor="middle">Assembly &amp; Multi-Platform</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Section 1: High-Level Workflow Structure -->
+        <section class="space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-indigo-300 flex items-center gap-2">
+                    📊 1. High-Level Workflow Structure
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-1">
+                    The framework balances four vertical phases with four horizontal operational tracking columns to maintain speed and precision.
+                </p>
+            </div>
+
+            <!-- Horizontal Axis Operational Columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- UPDATES Column -->
+                <div class="bg-slate-800/80 border border-blue-500/40 rounded-xl p-5 shadow-lg space-y-3 hover:border-blue-400 transition-colors">
+                    <div class="flex items-center gap-2 text-blue-400 font-bold text-lg">
+                        <span class="p-2 rounded-lg bg-blue-500/20 text-blue-300">📌</span>
+                        <h3>UPDATES</h3>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Real-time progress notes, status sticky notes, and process updates across each workflow step.
+                    </p>
+                </div>
+
+                <!-- ISSUES Column -->
+                <div class="bg-slate-800/80 border border-amber-500/40 rounded-xl p-5 shadow-lg space-y-3 hover:border-amber-400 transition-colors">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-lg">
+                        <span class="p-2 rounded-lg bg-amber-500/20 text-amber-300">⚠️</span>
+                        <h3>ISSUES</h3>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Technical roadblocks, manual review gates, or flagged quality checks requiring prompt adjustment.
+                    </p>
+                </div>
+
+                <!-- TOOLS Column -->
+                <div class="bg-slate-800/80 border border-purple-500/40 rounded-xl p-5 shadow-lg space-y-3 hover:border-purple-400 transition-colors">
+                    <div class="flex items-center gap-2 text-purple-400 font-bold text-lg">
+                        <span class="p-2 rounded-lg bg-purple-500/20 text-purple-300">🛠️</span>
+                        <h3>TOOLS</h3>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Dedicated platforms used at each stage (e.g., <em>Google Drive, Skool, Flow/Google, Canva, fal.ai, ElevenLabs, YouTube Studio</em>).
+                    </p>
+                </div>
+
+                <!-- TACTICS Column -->
+                <div class="bg-slate-800/80 border border-emerald-500/40 rounded-xl p-5 shadow-lg space-y-3 hover:border-emerald-400 transition-colors">
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-lg">
+                        <span class="p-2 rounded-lg bg-emerald-500/20 text-emerald-300">🎯</span>
+                        <h3>TACTICS</h3>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Detailed execution steps, screenshots, prompt strategies, and asset previews for seamless execution.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SVG Schema Matrix Diagram -->
+            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-6 shadow-xl space-y-4">
+                <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-table-cells text-indigo-400"></i> Operational Axis Layout Schema 📐
+                </h3>
+                <div class="overflow-x-auto">
+                    <svg viewBox="0 0 900 240" class="w-full min-w-[700px] h-auto">
+                        <rect x="0" y="0" width="900" height="240" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+
+                        <!-- Header row -->
+                        <rect x="20" y="20" width="180" height="36" rx="6" fill="#1e293b"/>
+                        <text x="110" y="43" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">PHASES (Vertical Axis)</text>
+
+                        <rect x="210" y="20" width="150" height="36" rx="6" fill="#1e3a8a"/>
+                        <text x="285" y="43" fill="#60a5fa" font-size="12" font-weight="bold" text-anchor="middle">📌 UPDATES</text>
+
+                        <rect x="370" y="20" width="150" height="36" rx="6" fill="#78350f"/>
+                        <text x="445" y="43" fill="#fbbf24" font-size="12" font-weight="bold" text-anchor="middle">⚠️ ISSUES</text>
+
+                        <rect x="530" y="20" width="160" height="36" rx="6" fill="#581c87"/>
+                        <text x="610" y="43" fill="#c084fc" font-size="12" font-weight="bold" text-anchor="middle">🛠️ TOOLS</text>
+
+                        <rect x="700" y="20" width="180" height="36" rx="6" fill="#064e3b"/>
+                        <text x="790" y="43" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">🎯 TACTICS</text>
+
+                        <!-- Phase Rows -->
+                        <g transform="translate(0, 65)">
+                            <!-- Phase 1 -->
+                            <rect x="20" y="0" width="180" height="36" rx="6" fill="#2563eb"/>
+                            <text x="110" y="23" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">1. CAPTURE 🎯</text>
+
+                            <rect x="210" y="0" width="670" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-dasharray="4 4"/>
+                            <text x="545" y="23" fill="#cbd5e1" font-size="11" text-anchor="middle">Signal Ideation &amp; Setup (Stages 1)</text>
+                        </g>
+
+                        <g transform="translate(0, 108)">
+                            <!-- Phase 2 -->
+                            <rect x="20" y="0" width="180" height="36" rx="6" fill="#7c3aed"/>
+                            <text x="110" y="23" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">2. ORGANIZE 📐</text>
+
+                            <rect x="210" y="0" width="670" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-dasharray="4 4"/>
+                            <text x="545" y="23" fill="#cbd5e1" font-size="11" text-anchor="middle">Gemini LLM Scripting &amp; Storyboard Setup (Stages 2-4)</text>
+                        </g>
+
+                        <g transform="translate(0, 151)">
+                            <!-- Phase 3 -->
+                            <rect x="20" y="0" width="180" height="36" rx="6" fill="#db2777"/>
+                            <text x="110" y="23" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">3. DISTILL 🧪</text>
+
+                            <rect x="210" y="0" width="670" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-dasharray="4 4"/>
+                            <text x="545" y="23" fill="#cbd5e1" font-size="11" text-anchor="middle">Asset Generation, Audit, Timeline &amp; ElevenLabs Sync (Stages 5-8)</text>
+                        </g>
+
+                        <g transform="translate(0, 194)">
+                            <!-- Phase 4 -->
+                            <rect x="20" y="0" width="180" height="36" rx="6" fill="#059669"/>
+                            <text x="110" y="23" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">4. EXPRESS 🚀</text>
+
+                            <rect x="210" y="0" width="670" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-dasharray="4 4"/>
+                            <text x="545" y="23" fill="#cbd5e1" font-size="11" text-anchor="middle">Final Assembly, Overlays &amp; Multi-Platform Delivery (Stages 9-10)</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Phase-by-Phase Breakdown -->
+        <section class="space-y-8 pt-4">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-indigo-300 flex items-center gap-2">
+                    🛠️ 2. Phase-by-Phase Breakdown
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-1">
+                    Detailed execution, goals, tools, and tactical steps across all 10 stages of the content generation funnel.
+                </p>
+            </div>
+
+            <!-- PHASE 1: CAPTURE -->
+            <div class="bg-slate-800/50 border border-blue-500/30 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center gap-3 border-b border-blue-500/20 pb-4">
+                    <span class="px-3 py-1 bg-blue-600 text-white font-bold rounded-lg text-sm uppercase">Phase 1</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-blue-300">🎯 CAPTURE</h3>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Stage 1 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>💡 Stage 1: Signal Ideation &amp; Setup</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-900/60 text-blue-300">Initial Setup</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Capture initial raw ideas, topics, and community feedback.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Jules 🤖, GitHub 🐙, Skool 🏫, Voice Memos / Microphone 🎙️, Sticky Notes 📝</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Gather user insights, core messaging requirements, and raw transcripts to feed into LLM processing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 2: ORGANIZE -->
+            <div class="bg-slate-800/50 border border-purple-500/30 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center gap-3 border-b border-purple-500/20 pb-4">
+                    <span class="px-3 py-1 bg-purple-600 text-white font-bold rounded-lg text-sm uppercase">Phase 2</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-purple-300">📐 ORGANIZE</h3>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Stage 2 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>🧠 Stage 2: Gemini / LLM Flow Gate</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-900/60 text-purple-300">Script Structuring</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Process raw input through Large Language Models (LLM) to extract structure and generate video scripts.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Gemini / Google Flow ♊</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Prompt engineering to structure core concepts into scene-by-scene script breakdowns, visual cues, and specific image prompts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>📝 Stage 3: Gemini Script &amp; Visual Prompts</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-900/60 text-purple-300">Storyboard Formatting</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Finalize text prompts and generate precise visual storyboard descriptions for each segment.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Google Flow 🌊</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Organize visual cues (e.g., scene setting, camera movement, character actions) into tabular prompt formats.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>⚙️ Stage 4: Generation &amp; Ideal Setup</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-900/60 text-purple-300">Template Preparation</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Generate visual assets and review initial renditions.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Google Flow 🌊, Canva 🎨</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Create initial visual assets, batch image variations, and set up project templates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 3: DISTILL -->
+            <div class="bg-slate-800/50 border border-pink-500/30 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center gap-3 border-b border-pink-500/20 pb-4">
+                    <span class="px-3 py-1 bg-pink-600 text-white font-bold rounded-lg text-sm uppercase">Phase 3</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-pink-300">🧪 DISTILL</h3>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Stage 5 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>🎬 Stage 5: Gemini &amp; Google Flow Generation</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-pink-900/60 text-pink-300">High-Volume Render</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">High-volume video asset generation and preliminary quality checks.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Google Flow 🌊, Canva 🎨</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Render video clips based on approved image prompts; refine aspect ratios (e.g., 9:16 vertical video format).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 6 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>🔍 Stage 6: Multi-Tool Quality Gate &amp; Clip Audit</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-pink-900/60 text-pink-300">Quality Filtering</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Audit and select the top-performing generated clips.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Canva 🎨</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Review motion consistency, visual aesthetics, and prompt adherence; discard unwanted variations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 7 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>🎞️ Stage 7: Canva &amp; System Timeline</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-pink-900/60 text-pink-300">Timeline Assembly</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Assemble timeline layers, aligning visuals with the main story arc.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Canva 🎨</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Import clips into an editing timeline, sync clips to timestamps, and structure layout transitions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 8 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>🎙️ Stage 8: Audio &amp; Visual Sync (fal.ai &amp; ElevenLabs)</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-pink-900/60 text-pink-300">Voiceover &amp; Sync</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">High-fidelity voiceover generation and audio-visual synchronization.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">fal.ai ⚡, ElevenLabs 🎧</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Generate AI voiceovers, sync voice-overs with visual cuts, and layer ambient background tracks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 4: EXPRESS -->
+            <div class="bg-slate-800/50 border border-emerald-500/30 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center gap-3 border-b border-emerald-500/20 pb-4">
+                    <span class="px-3 py-1 bg-emerald-600 text-white font-bold rounded-lg text-sm uppercase">Phase 4</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-emerald-300">🚀 EXPRESS</h3>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Stage 9 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>✨ Stage 9: Final Assembly &amp; Rendering</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-900/60 text-emerald-300">Captions &amp; Export</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Add text overlays, branding, and export final video files.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">Canva 🎨</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Add dynamic captions, titles, brand elements, and perform final render quality checks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 10 -->
+                    <div class="bg-slate-900/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                            <h4 class="font-bold text-slate-100 text-lg flex items-center gap-2">
+                                <span>📢 Stage 10: Multi-Platform Funnel / Delivery</span>
+                            </h4>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-900/60 text-emerald-300">Publishing &amp; Distribution</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm pt-1">
+                            <div class="space-y-1">
+                                <span class="font-bold text-indigo-400 uppercase tracking-wider block text-[11px]">🎯 Goal</span>
+                                <p class="text-slate-200">Publish content and manage post-launch distribution.</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-purple-400 uppercase tracking-wider block text-[11px]">🛠️ Tools</span>
+                                <p class="text-slate-200 font-medium">YouTube Studio 📹, Delivery Pilot ✈️</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="font-bold text-emerald-400 uppercase tracking-wider block text-[11px]">⚡ Tactics</span>
+                                <p class="text-slate-200">Upload vertical shorts/reels, configure titles, descriptions, tags, and track post-launch processing status.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
