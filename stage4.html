@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 4: ElevenLabs Audio Production 🎙️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8 font-sans">
+    <div class="max-w-7xl mx-auto space-y-6">
+        <!-- Top Navigation Bar -->
+        <nav class="bg-slate-800/80 border border-slate-700/80 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-extrabold text-indigo-400 hover:text-indigo-300 flex items-center gap-2 text-lg">
+                    🎬 Erdem VO Studio
+                </a>
+                <div class="flex flex-wrap items-center gap-1 sm:gap-3 text-xs sm:text-sm font-medium">
+                    <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Table Editor 📊</a>
+                    <a href="stage1.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 1 🚀</a>
+                    <a href="stage2.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 2 📖</a>
+                    <a href="stage3.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 3 🔍</a>
+                    <a href="stage4.html" class="px-3 py-1.5 rounded-lg text-white bg-indigo-600 shadow-sm transition-colors">Stage 4 🎙️</a>
+                    <a href="rationale.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Logic & Rationale 🧠</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="text-center space-y-4 border-b border-slate-800 pb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                🎙️ Stage 4: ElevenLabs Audio Production
+            </h1>
+            <p class="text-slate-400 max-w-3xl mx-auto text-base sm:text-lg">
+                Ready-to-use SSML markup and voice parameter settings for generating synthetic voiceovers with natural cadence, pauses, and emotional emphasis.
+            </p>
+        </header>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- SSML Script Code Block (2 cols) -->
+            <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800 rounded-xl p-6 shadow-2xl space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <h3 class="font-bold text-indigo-300 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> ElevenLabs Ready SSML Script
+                    </h3>
+                    <button onclick="copySSML()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-copy"></i> Copy SSML
+                    </button>
+                </div>
+                <pre id="ssml-code" class="text-xs sm:text-sm text-emerald-400 font-mono bg-slate-900 p-4 rounded-lg overflow-x-auto leading-relaxed border border-slate-800">
+&lt;speak&gt;
+&lt;prosody rate="medium"&gt;
+
+&lt;emphasis level="strong"&gt;When the IT market hit a downturn,&lt;/emphasis&gt; I realized the old playbooks were useless. &lt;break time="0.4s"/&gt; The rules had changed, &lt;break time="0.2s"/&gt; and I needed to build entirely new connections.
+
+&lt;break time="0.6s"/&gt;
+
+As AI accelerates, &lt;break time="0.3s"/&gt; skill expectations aren't just rising—&lt;emphasis level="strong"&gt;they're skyrocketing.&lt;/emphasis&gt;
+
+&lt;break time="0.6s"/&gt;
+
+Instead of backing down &lt;break time="0.2s"/&gt; or blaming my university degree, &lt;break time="0.3s"/&gt; I looked inward. &lt;break time="0.4s"/&gt; Active &lt;emphasis level="moderate"&gt;self-mastery&lt;/emphasis&gt; was the only way forward.
+
+&lt;break time="0.6s"/&gt;
+
+Real growth isn't a solo journey—&lt;emphasis level="moderate"&gt;it’s collective.&lt;/emphasis&gt; &lt;break time="0.4s"/&gt; It’s like launching a shared knowledge hub for everyone you care about.
+
+&lt;break time="0.6s"/&gt;
+
+When you level up, &lt;break time="0.3s"/&gt; you lift your entire community. &lt;break time="0.5s"/&gt; Educating your outer circle isn't just an option—&lt;emphasis level="strong"&gt;it's your duty.&lt;/emphasis&gt;
+
+&lt;/prosody&gt;
+&lt;/speak&gt;</pre>
+            </div>
+
+            <!-- Recommended Voice Settings (1 col) -->
+            <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-6 shadow-xl space-y-6">
+                <h3 class="font-bold text-indigo-300 text-lg border-b border-slate-700 pb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-sliders"></i> Voice Settings
+                </h3>
+
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <label class="text-xs uppercase font-bold text-slate-400">Voice Model</label>
+                        <p class="text-sm text-slate-200 font-medium bg-slate-900/60 p-2.5 rounded-lg border border-slate-700">Eleven Multilingual v2 / Turbo v2.5</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-400 uppercase">Stability</span>
+                            <span class="text-indigo-400">0.45</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 italic">Lower stability allows natural emotion and pitch variation across dramatic shifts.</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-400 uppercase">Clarity / Similarity</span>
+                            <span class="text-indigo-400">0.80</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 italic">Ensures crisp vocal delivery while maintaining key speaker attributes.</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-400 uppercase">Style Exaggeration</span>
+                            <span class="text-indigo-400">0.20</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 20%"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 italic">Adds subtle energetic emphasis without distorting audio quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copySSML() {
+            const code = document.getElementById('ssml-code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('SSML Script copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
