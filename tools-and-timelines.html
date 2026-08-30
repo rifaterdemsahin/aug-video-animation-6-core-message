@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools and Timelines 🕰️</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Drag and Drop library for Kanban -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <style>
+        .kanban-column { min-height: 200px; }
+        .kanban-item { cursor: grab; }
+        .kanban-item:active { cursor: grabbing; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8 font-sans">
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Top Navigation Bar -->
+        <nav class="bg-slate-800/80 border border-slate-700/80 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-extrabold text-indigo-400 hover:text-indigo-300 flex items-center gap-2 text-lg">
+                    🎬 Erdem VO Studio
+                </a>
+                <div class="flex flex-wrap items-center gap-1 sm:gap-3 text-xs sm:text-sm font-medium">
+                    <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Table Editor 📊</a>
+                    <a href="stage1.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 1 🚀</a>
+                    <a href="stage2.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 2 📖</a>
+                    <a href="stage3.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 3 🔍</a>
+                    <a href="stage4.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Stage 4 🎙️</a>
+                    <a href="workflow.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Workflow ⚙️</a>
+                    <a href="rationale.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/60 transition-colors">Logic & Rationale 🧠</a>
+                    <a href="tools-and-timelines.html" class="px-3 py-1.5 rounded-lg text-white bg-indigo-600 shadow-sm transition-colors">Tools & Timelines 🕰️</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="text-center space-y-4 border-b border-slate-800 pb-8">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                🕰️ Tools & Timelines
+            </h1>
+            <p class="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+                A historical record of the AI-assisted video creation process from August 30, 2026. This page details the tools used, the timeline of events, and provides an interactive Kanban board for future workflows.
+            </p>
+        </header>
+
+        <!-- Section 1: Timeline of Events -->
+        <section class="space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-indigo-300 flex items-center gap-2">
+                    <i class="fa-solid fa-clock"></i> 1. Timeline of Events (30 Aug 2026, 07:52 - 10:22)
+                </h2>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 shadow-xl space-y-4 text-slate-300">
+                <ul class="space-y-4 pl-4 border-l-2 border-indigo-500/50">
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">07:52</strong> — Local voiceover page checking. (localhost:8080)
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">07:53</strong> — Pipeline whiteboard (Canva) + Flow + Gemini script for "core message".
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:00 - 08:01</strong> — Created new GitHub repo for video 6: <code class="text-xs bg-slate-700 px-1 rounded">aug-video-animation-6-core-message</code>.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:03 - 08:05</strong> — New Jules session for building the index.html page.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:08 - 08:18</strong> — GitHub Pages workflow started. Merged PR #1. Live site came up.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:21 - 08:25</strong> — Gemini chat for Infographic and opening chromeTerminal.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:27 - 08:29</strong> — YouTube Studio interactions for Short: "They Called AI a Con..."
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">08:35 - 08:37</strong> — Local voiceover confirmed working. Canva Short design started.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">09:13 - 09:25</strong> — Google Flow: "core message" scene edits (Main generative video block).
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">09:39 - 09:49</strong> — Canva "aug 5" Short edits and YouTube Studio upload.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">09:52 - 09:54</strong> — Workflow Gemini chat, shipping Pages stages (PR #2). Clicked through live Pages.
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">10:01 - 10:06</strong> — Second Short in Studio, Workflow PR #3, and local product pages (AI Certification Helper).
+                    </li>
+                    <li class="relative pl-6">
+                        <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400"></span>
+                        <strong class="text-indigo-300">10:19 - 10:22</strong> — Final Jules touches on index.html. Exploring this ChromeTabGroups repo.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Section 2: Host Mix -->
+            <section class="space-y-4">
+                <div class="border-b border-slate-800 pb-2">
+                    <h2 class="text-xl font-bold text-purple-300 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie"></i> 2. Host Mix (Visits)
+                    </h2>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 shadow-xl text-sm">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-slate-400 border-b border-slate-700">
+                                <th class="pb-2">Host</th>
+                                <th class="pb-2">Visits</th>
+                                <th class="pb-2">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700/50 text-slate-300">
+                            <tr><td class="py-2">github.com</td><td class="py-2">55</td><td class="py-2">New repo, Pages, PRs #1–#3</td></tr>
+                            <tr><td class="py-2">labs.google</td><td class="py-2">49</td><td class="py-2">Flow project + Flow TV</td></tr>
+                            <tr><td class="py-2">studio.youtube.com</td><td class="py-2">27</td><td class="py-2">Two Shorts: analytics, comments, edit, upload</td></tr>
+                            <tr><td class="py-2">jules.google.com</td><td class="py-2">18</td><td class="py-2">Jules sessions on pipeline / HTML</td></tr>
+                            <tr><td class="py-2">rifaterdemsahin.github.io</td><td class="py-2">17</td><td class="py-2">Live aug-video-animation-6 pages</td></tr>
+                            <tr><td class="py-2">www.canva.com</td><td class="py-2">14</td><td class="py-2">Pipeline whiteboard + Shorts designs</td></tr>
+                            <tr><td class="py-2">www.google.com</td><td class="py-2">10</td><td class="py-2">Image search for Jules / GitHub</td></tr>
+                            <tr><td class="py-2">localhost:8000</td><td class="py-2">10</td><td class="py-2">AI Certification Helper</td></tr>
+                            <tr><td class="py-2">gemini.google.com</td><td class="py-2">8</td><td class="py-2">Scripts, infographic, workflow chats</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 3 & 4: Jules Sessions & YouTube Artifacts -->
+            <div class="space-y-6">
+                <!-- Jules Sessions -->
+                <section class="space-y-4">
+                    <div class="border-b border-slate-800 pb-2">
+                        <h2 class="text-xl font-bold text-emerald-300 flex items-center gap-2">
+                            <i class="fa-solid fa-robot"></i> 3. Jules Sessions Used
+                        </h2>
+                    </div>
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 shadow-xl text-sm">
+                        <ul class="space-y-3 text-slate-300">
+                            <li><strong>3805733227528411235</strong> (08:00): Fix broken task URLs in VideoProductionPipeline index.html</li>
+                            <li><strong>13902820648022797724</strong> (08:05): Build index.html table / emojis / copy; stage HTML; became PR #1</li>
+                            <li><strong>7387616889075243383</strong> (09:53): Follow-on Jules around workflow page / PR #3</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- YouTube Artifacts -->
+                <section class="space-y-4">
+                    <div class="border-b border-slate-800 pb-2">
+                        <h2 class="text-xl font-bold text-red-400 flex items-center gap-2">
+                            <i class="fa-brands fa-youtube"></i> 4. YouTube Artifacts
+                        </h2>
+                    </div>
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 shadow-xl text-sm">
+                        <ul class="space-y-3 text-slate-300">
+                            <li><span class="text-slate-400">08:27</span> — <strong>OGB69NVn8ZU</strong>: "They Called AI a Con. I Walked In Anyway."</li>
+                            <li><span class="text-slate-400">09:49</span> — <strong>omC9xa6G7u4</strong>: "Don't Blame Your Degree. Level Up Your Circle."</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Section 5: Interactive Kanban Checklist -->
+        <section class="space-y-6 pt-4">
+            <div class="border-b border-slate-800 pb-4 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-amber-300 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check"></i> 5. Video Creation Kanban Checklist
+                </h2>
+                <span class="text-xs text-slate-400">Drag and drop to organize tasks!</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- To Do Column -->
+                <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-4 flex flex-col">
+                    <h3 class="font-bold text-slate-200 mb-4 border-b border-slate-600 pb-2">📝 To Do</h3>
+                    <div id="kanban-todo" class="kanban-column space-y-3 flex-1">
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Idea/Scripting:</strong> Create Gemini script for "core message" and set visual prompts.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Local Setup:</strong> Check local voiceover server on localhost:8080.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Repo Setup:</strong> Create new GitHub repo for video.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Pages HTML:</strong> Use Jules to scaffold index.html and stage pages; create PRs.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Visuals:</strong> Canva whiteboard pipeline & create YouTube Shorts templates.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Generation:</strong> Google Flow scene edits for main generative video block.
+                        </div>
+                        <div class="kanban-item bg-slate-700 p-3 rounded-lg border border-slate-600 shadow-sm text-sm text-slate-200">
+                            <strong>Distribution:</strong> Upload to YouTube Studio and check Analytics/Comments.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In Progress Column -->
+                <div class="bg-slate-800/80 border border-indigo-500/30 rounded-xl p-4 flex flex-col">
+                    <h3 class="font-bold text-indigo-300 mb-4 border-b border-indigo-500/30 pb-2">🔄 In Progress</h3>
+                    <div id="kanban-progress" class="kanban-column space-y-3 flex-1">
+                        <!-- Drop area -->
+                    </div>
+                </div>
+
+                <!-- Done Column -->
+                <div class="bg-slate-800/80 border border-emerald-500/30 rounded-xl p-4 flex flex-col">
+                    <h3 class="font-bold text-emerald-300 mb-4 border-b border-emerald-500/30 pb-2">✅ Done</h3>
+                    <div id="kanban-done" class="kanban-column space-y-3 flex-1">
+                        <!-- Drop area -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Sortable for Kanban columns
+            const todo = document.getElementById('kanban-todo');
+            const progress = document.getElementById('kanban-progress');
+            const done = document.getElementById('kanban-done');
+
+            new Sortable(todo, { group: 'shared', animation: 150 });
+            new Sortable(progress, { group: 'shared', animation: 150 });
+            new Sortable(done, { group: 'shared', animation: 150 });
+        });
+    </script>
+</body>
+</html>
